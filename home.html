@@ -28,7 +28,7 @@
 <body class="min-h-screen max-w-md bg-base-200 mx-auto rounded-lg">
  
     <!-- header section -->
-    <header class="header-section pt-1 border-b-2 border-gray-300">
+    <header class="header-section pt-1 border-b-2 border-gray-300 sticky top-0 bg-base-200 z-10">
         <!-- container -->
         <div class="container max-w-screen-sm mx-auto p-3 ">
 
@@ -41,7 +41,7 @@
 
                 <!-- logo content -->
                 <div>
-                    <h2 class="text-lg font-bold text-gray-900">$45000</h2>
+                    <h2 class="text-lg font-bold text-gray-900">$ <span id="balance">45000</span></h2>
                     <p class="text-xs text-gray-500">Available Balance</p>
                 </div>
                 </div>
@@ -70,7 +70,12 @@
             </div>
 
             <!-- payoo container -->
-            <div class="payoo-container payoo-cards grid grid-cols-3 py-4 gap-3">
+            <div class="payoo-container  grid grid-cols-3 py-4 gap-3">
+                <!-- button -->
+                 <!-- <button class="btn py-4 btn-primary btn-soft">
+                    <img src="images/opt-1.png" alt="">
+                    <p>Add Money</p>
+                 </button> -->
 
                 <!-- payoo card 1-->
                 <div class="payoo-card flex flex-col items-center border border-gray-200 py-3 justify-center rounded-xl  hover:shadow-md transition">
@@ -110,5 +115,36 @@
             </div>
         </div>
     </section>
+
+
+    <!-- cash out section -->
+    <section id="cashout" class="w-11/12 mx-auto py-5">
+        <h1 class="text-xl font-bold mb-5">Cashout</h1>
+        <div class="card bg-base-100 w-full shadow-2xl">
+            <div class="card-body">
+                <fieldset class="fieldset space-y-3">
+
+                    <label class="label text-neutral font-bold">Agent Number</label>
+                    <input id="cashout-number" maxlength="11" minlength="11" type="number" class="input rounded-full bg-base-200 w-full border border-stone-500" value="01331539924" placeholder="Enter Agent 11 digit Number"/>
+
+                    <label class="label text-neutral font-bold">Amount</label>
+                    <input id="cashout-amount" type="number" class="input rounded-full bg-base-200 w-full border border-stone-500" placeholder="Enter Amount for withdraw"/>
+ 
+                
+                    <br>
+
+                    <label class="label text-neutral font-bold">4 Digit Pin</label>
+                    <input id="cashout-pin" type="password" class="input rounded-full bg-base-200 w-full border border-stone-500" value="1234" placeholder="Enter 4 Digit Pin">
+                    <div></div>
+
+                    <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full w-full">WithDraw Money</button>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="machine.js"></script>
+    <script src="cashout.js"></script>
 </body>
 </html>
